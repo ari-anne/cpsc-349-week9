@@ -1,62 +1,65 @@
-var charOneSpr = document.querySelector("#SomeID1");
-var charOneSpr = document.querySelector("#SomeID2");
-
-var C1;
+var charOneSpr = document.querySelector("#cat");
+var charTwoSpr = document.querySelector("#dog");
 
 
-var sqrGridSize = 8;//might not be used?
 
-var array_GridTiles = []; //empty array, should be filled with tileData
+//var sqrGridSize = 8;//might not be used?
+
+var array_GridTiles = []; //empty array
 
 //Tile data to be paired with DOM element
-var tileData = {
-    column: "",
-    row: "",
-    gridID: "null" //this is the element ID
-};
+//var tileData = {
+//    column: "",
+//    row: "",
+//    gridID: "null" //this is the element ID
+//};
 
 
 // when window loads all assets
-window.onload = function()
-{
+window.onload = function () {
     alert("Hello, welcome to the grid board!");
-    
-    myGamePiece = new component(30, 30, "red", 10, 120);
-    
+
+    initializeGridSize();
+
 };
 
 
 
 
 //Parameter is the square grid size
-function initializeGridSize()
-{
-    var boardElement = document.querySelector(".board");
-    
-    var innerHtmlOfTile = "<div class=\"tileBackground\">Tile!</div>";
-    //use query to search for all grid element frames? (ie: #Grid0-0 )
-    //var allTilesCSS = document.querySelectorAll("#GridTile");
-    for(i = 0; i < (sqrGridSize*sqrGridSize); i++)
-        {
-            
-        }
-    
-    
-    
+function initializeGridSize() {
+//    var boardElement = document.querySelector(".board");
+
+    array_GridTiles = document.querySelectorAll("#tile");
     //go thru all found GridTiles, rename their ID to match the grid size
+
     
-    
-} 
+    array_GridTiles[1].appendChild(charOneSpr);
+    array_GridTiles[2].appendChild(charTwoSpr);
 
-
-
-
-function MoveUp(char)
-{
-    
 }
 
-function checkMovementTo(theNewTile)
+
+//only call if valid step
+function swapImage(char, newRow, newCol)
 {
-    
+    //get the character to move to
+    //clear old location
+    //insert to new location?
+}
+
+
+
+function MoveUp(isCat) {
+
+
+    if (isCat) {
+
+    } else {
+
+    }
+}
+
+function checkMovementTo(theNewTile) {
+    //check if the div has an image inside it and read it's ID
 }
