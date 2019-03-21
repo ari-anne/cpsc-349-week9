@@ -8,11 +8,10 @@ var charTwoSpr = document.querySelector("#dog");
 var array_GridTiles = []; //empty array
 
 //Tile data to be paired with DOM element
-//var tileData = {
-//    column: "",
-//    row: "",
-//    gridID: "null" //this is the element ID
-//};
+var tileData = {
+    column: "",
+    row: "",
+};
 
 
 // when window loads all assets
@@ -48,18 +47,30 @@ function swapImage(char, newRow, newCol)
     //insert to new location?
 }
 
-
-
-function MoveUp(isCat) {
-
-
+//bool, direction="up","left","down","right"
+function Move(isCat, direction) {
+    var currRow;
+    var currCol;
+    
     if (isCat) {
-
+        //find parent data-'type'
+        currRow= charOneSpr.parentNode.dataset.rowId;
+        currCol= charOneSpr.parentNode.dataset.colId;
+        
+        switch(direction)
+            {
+                case "up": checkMovementTo( );
+                case "down":
+                case "left":
+                case "right":
+            }
+        
     } else {
 
     }
 }
 
-function checkMovementTo(theNewTile) {
+function checkMovementTo(theOldTile, theNewTile, char) {
     //check if the div has an image inside it and read it's ID
+    
 }
