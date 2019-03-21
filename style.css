@@ -1,37 +1,21 @@
-body {
-
-}
-
-.frame {
-    display: grid;
-    height: 1000px;
-    width: 800px;
-    grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(10, 1fr);
-      grid-template-areas:
-      "instructions instructions instructions instructions instructions instructions instructions instructions"
-      "board board board board board board board board"
-      "board board board board board board board board"
-      "board board board board board board board board"
-      "board board board board board board board board"
-      "board board board board board board board board"
-      "board board board board board board board board"
-      "board board board board board board board board"
-      "board board board board board board board board"
-      "controls controls controls controls controls controls controls controls";
-}
-
 .instructions {
     background-color: aqua;
-    grid-area: instructions;
 }
 
 .board {
-  background-image: url(./assets/5.png);
-  grid-area: board;
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    grid-gap: 5px;
 }
 
 .controls {
     background-color: aqua;
-    grid-area: controls;
 }
+
+#tile {
+    border-radius: 5px;
+    background-image: url("./assets/5.png");
+    background-size: cover;
+}
+
