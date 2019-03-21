@@ -1,27 +1,37 @@
 body {
-    
+
 }
 
 .frame {
     display: grid;
     height: 1000px;
     width: 800px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      grid-template-areas:
+      "instructions instructions instructions instructions instructions instructions instructions instructions"
+      "board board board board board board board board"
+      "board board board board board board board board"
+      "board board board board board board board board"
+      "board board board board board board board board"
+      "board board board board board board board board"
+      "board board board board board board board board"
+      "board board board board board board board board"
+      "board board board board board board board board"
+      "controls controls controls controls controls controls controls controls";
 }
 
 .instructions {
-    grid-column: 1/9;
-    grid-row: 1;
     background-color: aqua;
+    grid-area: instructions;
 }
 
 .board {
-    
+  background-image: url(./assets/5.png);
+  grid-area: board;
 }
 
 .controls {
-    grid-column: 1/9;
-    grid-row: 9;
     background-color: aqua;
+    grid-area: controls;
 }
